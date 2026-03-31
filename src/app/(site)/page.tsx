@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,38 +9,55 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center px-6 md:px-20 pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH-1BN-B0tr5GnBhvc29aVErSAtXMx5FPoXBPE9bYTM7Zi1Txw11Oe5kTU9N4bXNXqIQDd7h7bOgukfcNVlst7FqcCR4M7PGh5rhJk-d85HfMbl4Yz24Q2NFHHOLn3tyQU9CCpxFWGv8BoWK7fAHFX4AUehUh822CtsXh64KEZ7lCFVdh7h1T0zzAI97tgOk2WtRCm6AEXGkWDvNgrV1TRU8I3tFH6gYSINkvR393d-Uut5yBp6QaJbGjVys99qpQcSCpnxgePdgRu"
+            src="/images/hero.png"
             alt="Luxury minimalist living room"
-            fill
-            className="object-cover"
+            width={900}
+            height={900}
+            className="w-full h-full object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-foreground/20 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-4xl">
-          <p className="uppercase text-[0.75rem] tracking-[0.3em] font-semibold font-label text-on-primary/80 mb-6">
+          <p className="uppercase text-[0.65rem] lg:text-[0.75rem] tracking-[0.3em] font-semibold font-label text-on-primary/80 mb-6">
             Elevating Interior Excellence
           </p>
-          <h1 className="text-6xl md:text-[5.5rem] font-headline font-bold leading-[0.95] tracking-tight text-on-primary mb-10">
+          <h1 className="text-4xl md:text-[4.0rem] font-headline font-bold leading-[0.95] tracking-tight text-on-primary mb-10">
             Marketing for the <br />
             <span className="italic font-normal">Architectural Soul.</span>
           </h1>
-          <p className="text-lg md:text-xl text-on-primary/80 max-w-xl leading-relaxed mb-12">
+          <p className="text-sm md:text-lg text-on-primary/80 max-w-xl leading-relaxed mb-12">
             We bridge the gap between high-end interior craft and digital
             visibility. Strategic growth for design firms who demand precision.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
+          <div className="hidden lg:flex flex-col sm:flex-row gap-6">
             <Link
               href="/booking"
-              className="bg-primary-dim text-on-primary px-10 py-5 text-sm font-bold uppercase tracking-widest font-label hover:bg-primary transition-all text-center"
+              className="bg-primary-dim text-on-primary lg:px-10 py-4 text-xs lg:text-sm font-bold uppercase tracking-widest font-label hover:bg-primary transition-all text-center"
             >
               Book Consultation
             </Link>
             <Link
               href="/portfolio"
-              className="border border-on-primary text-on-primary px-10 py-5 text-sm font-bold uppercase tracking-widest font-label backdrop-blur-sm hover:bg-surface/50 transition-all hover:text-on-surface text-center"
+              className="border border-on-primary text-on-primary lg:px-10 py-4 text-xs lg:text-sm font-bold uppercase tracking-widest font-label backdrop-blur-sm hover:bg-surface/50 transition-all hover:text-on-surface text-center"
             >
               View Portfolio
+            </Link>
+          </div>
+          <div className="flex lg:hidden flex-col sm:flex-row gap-6">
+            <Link
+              href="/booking"
+              className=" text-on-primary flex items-center text-xs font-bold uppercase underline tracking-widest font-label hover:text-primary transition-all self-start"
+            >
+              <span>Book Consultation</span>
+              <ArrowRight className="w-4 h-4 inline-block ml-1" />
+            </Link>
+            <Link
+              href="/portfolio"
+              className="text-on-primary flex items-center text-xs font-bold uppercase underline tracking-widest font-label hover:text-primary transition-all self-start"
+            >
+              <span>View Portfolio</span>
+              <ArrowRight className="w-4 h-4 inline-block ml-1" />
             </Link>
           </div>
         </div>
